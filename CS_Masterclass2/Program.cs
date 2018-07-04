@@ -11,20 +11,22 @@ namespace CS_Masterclass2
 
         static void Main(string[] args)
         {
-            string friend1 = "Franck";
-            string friend2 = "Joe";
-            string friend3 = "Louise";
-
-            GreetFriend(friend1);
-            GreetFriend(friend2);
-            GreetFriend(friend3);
-
+            Console.WriteLine(Add());
             Console.Read();
         }
 
-        public static void GreetFriend(string name)
+        public static int Add()
         {
-            Console.WriteLine("Hi {0}, my friend!", name);
+            Console.WriteLine("Please enter the first number");
+            string input1 = Console.ReadLine();
+            int num1 = int.Parse(input1);
+
+            Console.WriteLine("Please enter the second number");
+            string input2 = Console.ReadLine();
+            int num2 = int.Parse(input2);
+
+
+            return num1 + num2;
         }
 
     }
