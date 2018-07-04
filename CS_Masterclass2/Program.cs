@@ -17,7 +17,7 @@ namespace CS_Masterclass2
 
         public static void WriteSomething()
         {
-            Console.WriteLine("I am called from a method");
+            Console.WriteLine("I am called from a methoddddd");
         }
 
         public static void WriteSomethingSpecific(string myText)
