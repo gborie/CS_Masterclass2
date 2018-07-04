@@ -11,22 +11,33 @@ namespace CS_Masterclass2
 
         static void Main(string[] args)
         {
-            Console.WriteLine(Add());
-            Console.Read();
-        }
+            Console.WriteLine("Please enter a number!");
+            string userInput = Console.ReadLine();
 
-        public static int Add()
-        {
-            Console.WriteLine("Please enter the first number");
-            string input1 = Console.ReadLine();
-            int num1 = int.Parse(input1);
+            try
+            {
+                int userInputAsInt = int.Parse(userInput);
+            }
+            catch (FormatException)
+            {
 
-            Console.WriteLine("Please enter the second number");
-            string input2 = Console.ReadLine();
-            int num2 = int.Parse(input2);
+                Console.WriteLine("Format exception, please enter the correct type next time.");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Overflow exception, the number was too long or too short for an int32");
+            }
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine("ArgumentNullException, the value was empty");
+            }
+            finally
+            {
+                Console.WriteLine("This is called anyways!");
+            }
 
+            Console.ReadKey();
 
-            return num1 + num2;
         }
 
     }
