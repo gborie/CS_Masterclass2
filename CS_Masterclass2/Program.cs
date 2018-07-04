@@ -8,21 +8,23 @@ namespace CS_Masterclass2
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            WriteSomething();
-            WriteSomethingSpecific("I am an argument and am called from a method");
+            string friend1 = "Franck";
+            string friend2 = "Joe";
+            string friend3 = "Louise";
+
+            GreetFriend(friend1);
+            GreetFriend(friend2);
+            GreetFriend(friend3);
+
             Console.Read();
         }
 
-        public static void WriteSomething()
+        public static void GreetFriend(string name)
         {
-            Console.WriteLine("I am called from a method");
-        }
-
-        public static void WriteSomethingSpecific(string myText)
-        {
-            Console.WriteLine(myText);
+            Console.WriteLine("Hi {0}, my friend!", name);
         }
 
     }
