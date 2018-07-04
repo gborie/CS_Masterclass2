@@ -10,20 +10,29 @@ namespace CS_Masterclass2
     {
         static void Main(string[] args)
         {
-            WriteSomething();
-            WriteSomethingSpecific("I am an argument and am called from a method");
+            Console.WriteLine(Add(Add(4, 3), Add(6, 9)));
+            Console.WriteLine(Add(15,31));
+            Console.WriteLine(Multiply(34, 67));
+            Console.WriteLine(Divide(25,13));
             Console.Read();
         }
 
-        public static void WriteSomething()
+        public static int Add(int num1, int num2)
         {
-            Console.WriteLine("I am called from a method");
+            return num1 + num2;
         }
 
-        public static void WriteSomethingSpecific(string myText)
+        public static int Multiply(int num1, int num2)
         {
-            Console.WriteLine(myText);
+            return num1 * num2;
         }
+
+        public static double Divide(double num1, double num2)
+        {
+            return num1 / num2;
+        }
+
+
 
     }
 }
