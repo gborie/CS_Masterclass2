@@ -11,24 +11,68 @@ namespace CS_Masterclass2
 
         static void Main(string[] args)
         {
-            int num1 = 10;
-            int num2 = 0;
+            int num1 = 5;
+            int num2 = 3;
+            int num3;
 
+            // unary operators
+            num3 = -num1;
+            Console.WriteLine("num3 is {0}", num3);
+
+            bool isSunny = true;
+            Console.WriteLine("Is it sunny? {0}", !isSunny);
+
+            //increment operators
+            int num = 0;
+            num++;
+            Console.WriteLine("num is {0}", num);
+            Console.WriteLine("num is {0}", num++);
+            //pre increment
+            Console.WriteLine("num is {0}", ++num);
+
+            //decrement operator
+            num--;
+            Console.WriteLine("num is {0}", num);
+            Console.WriteLine("num is {0}", num--);
+            //pre decrement
+            Console.WriteLine("num is {0}", --num);
+
+            //
             int result;
 
-            try
-            {
-                result = num1 / num2;
+            result = num1 + num2;
+            Console.WriteLine("result of num1 + num2 is {0}", result);
+            result = num1 - num2;
+            Console.WriteLine("result of num1 + num2 is {0}", result);
+            result = num1 * num2;
+            Console.WriteLine("result of num1 * num2 is {0}", result);
+            result = num1 / num2;
+            Console.WriteLine("result of num1 / num2 is {0}", result);
+            result = num1 % num2;
+            Console.WriteLine("result of num1 % num2 is {0}", result);
 
-            }
-            catch (Exception)
-            {
+            //relational and type operators
+            bool isLower;
+            isLower = num1 < num2;
+            Console.WriteLine("result of num1 < num2 is {0}", isLower);
 
-                Console.WriteLine("Can't divide by zero!");
-            }
+            //equality operator
+            bool isEqual;
+            isEqual = num1 == num2;
+            Console.WriteLine("result of num1 == num2 is {0}", isEqual);
+
+            isEqual = num1 != num2;
+            Console.WriteLine("result of num1 != num2 is {0}", isEqual);
+
+            // conditional operators
+            bool isLowerAndSunny;
+            isLowerAndSunny = isLower && isSunny;
+            Console.WriteLine("result of isLower && isSunny is {0}", isLowerAndSunny);
+
+            isLowerAndSunny = isLower || isSunny;
+            Console.WriteLine("result of isLower || isSunny is {0}", isLowerAndSunny);
 
             Console.ReadKey();
-
         }
 
     }
